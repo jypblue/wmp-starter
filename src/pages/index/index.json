@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "一条",
+  "navigationBarTitleText": "wechat",
   "disableScroll": true,
   "usingComponents": {
     "shg-tab": "components/tab/index",
