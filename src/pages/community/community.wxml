@@ -1,0 +1,16 @@
+<view class="" hover-class="none" hover-stop-propagation="false">
+
+</view>
+
+<van-tabbar
+  active="{{ active }}"
+  active-color="#07c160"
+  inactive-color="#000"
+  bind:change="onChange"
+>
+  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+  <van-tabbar-item icon="search">消息</van-tabbar-item>
+  <van-tabbar-item icon="friends-o">发布</van-tabbar-item>
+  <van-tabbar-item icon="setting-o">我的</van-tabbar-item>
+  <van-tabbar-item icon="setting-o">去商城</van-tabbar-item>
+</van-tabbar>

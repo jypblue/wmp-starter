@@ -1,0 +1,31 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<view class="tab-bar" wx:if="{{showTabBar}}">
+  <view class="tab-bar-border"></view>
+  <view class="tab-bar-list">
+     <view wx:for="{{shopList}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+        <view class="iconfont {{item.iconPath}}" style="color: {{selected === index ? selectedColor : color}}">
+        </view>
+        <view class="title" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
+      </view>
+      <view class="tab-bar-item" data-type="COMMUNITY" catchtap="toggleTabBarList">
+        <view class="tab-bar-icon-star">
+          <view class="iconfont icon-star" style="color: {{selectedColor}}"></view>
+        </view>
+        <view class="title">去看看</view>
+      </view>
+  </view>
+
+  <!-- <view class="tab-bar-list" wx:if="{{type === 'COMMUNITY'}}">
+     <view wx:for="{{communityList}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+        <view class="iconfont {{item.iconPath}}" style="color: {{selected === index ? selectedColor : color}}">
+        </view>
+        <view class="title" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
+      </view>
+      <view class="tab-bar-item" data-type="SHOP" catchtap="toggleTabBarList">
+        <view class="tab-bar-icon-star">
+          <view class="iconfont icon-star" style="color: {{selectedColor}}"></view>
+        </view>
+        <view class="title">去商城</view>
+      </view>
+  </view> -->
+</view>

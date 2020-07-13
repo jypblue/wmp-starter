@@ -1,0 +1,79 @@
+<import src="components/cms-wxml/index.wxml"/>
+
+<view class="page">
+  <view class="top-wrap">
+    <view class="flex flex-align-center flex-pack-justify search-bar">
+      <view class="search-bar-icon">
+        <view class="iconfont icon-scan color-666"></view>
+      </view>
+      <view class="search-bar-input flex flex-align-center flex1" bind:tap="handleSearchInputClick">
+        <view class="iconfont icon-search fs24"></view>
+        <input class="search-bar-input-inner" type="text" focus="{{searchBarFocus}}" confirm-type="search" placeholder="{{placeholder}}" />
+      </view>
+      <view class="search-bar-icon">
+        <view class="iconfont icon-qrcode color-666"></view>
+      </view>
+      <view class="search-bar-icon pl30">
+        <view class="iconfont icon-news fs34 color-666"></view>
+      </view>
+    </view>
+    <view >
+      <shg-tab
+        id="category"
+        tab-data="{{categoryMenu}}"
+        tab-cur="{{categoryCur}}"
+        color="#ad0e11"
+        size="{{84}}"
+        scroll="{{true}}"
+        bind:change="toggleCategory" />
+    </view>
+  </view>
+  <swiper
+    class="page-swiper"
+    current="{{categoryCur}}"
+    duration="{{duration}}"
+    bind:animationfinish="animationFinish"
+    >
+    <swiper-item wx:for="{{categoryData}}" wx:key="index">
+      <shg-scroll
+          requesting="{{item.requesting}}"
+          end="{{item.end}}"
+          empty-show="{{item.emptyShow}}"
+          list-count="{{item.listData.length}}"
+          has-top="{{true}}"
+          top-size="184rpx"
+          bottom-size="calc(50px + env(safe-area-inset-bottom))"
+          color="{{color}}"
+          bind:refresh="refreshTabPane"
+          bind:more="loadMoreTabListData">
+          <view class="cms-cells">
+            <!-- cms 组件 -->
+            <view
+              wx:for="{{item.listData}}"
+              wx:key="index"
+              wx:for-item="cmsModule"
+              bind:tap="tapCmsModule">
+              <!-- cms 组件集合 start-->
+              <cms>
+                <template
+                  wx:if="{{cmsModule.data}}"
+                  is="{{cmsModule.type}}"
+                  data="{{ module: cmsModule.data }}">
+                </template>
+              </cms>
+              <view class="cms-cell" wx:if="{{!cmsModule.data}}">
+                {{cmsModule.type}}
+              </view>
+            </view>
+            <!-- cms 组件 end-->
+            <!-- 猜你喜欢组件 -->
+            <view class="falls-list-wrap" wx:if="{{isH5GuessLikeInit}}">
+               <falls-list id="homeFallsList" interval-width="14rpx"></falls-list>
+            </view>
+
+
+          </view>
+      </shg-scroll>
+    </swiper-item>
+  </swiper>
+</view>

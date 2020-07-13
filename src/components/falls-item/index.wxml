@@ -1,0 +1,28 @@
+<view class="falls-item">
+    <image class="falls-item-pic" src="{{item.entity.imageUrl}}" mode="widthFix"></image>
+    <view class="falls-item-content">
+      <view class="falls-item-title">
+        {{item.entity.title}}
+      </view>
+      <view class="falls-item-describe">
+        {{item.entity.productDescribeText}}
+      </view>
+      <view class="flex row-left-bottom">
+        <view class="falls-item-price" wx:if="{{item.entity.price}}">￥{{item.entity.price}}</view>
+        <view class="falls-item-price is-underline" wx:if="{{item.entity.underlinedPrice}}">￥{{item.entity.underlinedPrice}}</view>
+      </view>
+      <view class="flex flex-pack-justify">
+        <view class="flex1 flex falls-item-tags pt10" wx:if="{{item.entity.tagList}}">
+          <view class="falls-item-tag"
+            wx:for="{{item.entity.tagList}}"
+            wx:for-item="tag"
+            wx:key="tagType"
+            style="color: {{tag.color}}; border: 1rpx solid {{tag.color}}"
+            >
+            {{tag.label}}
+          </view>
+        </view>
+        <view class="iconfont icon-more"></view>
+      </view>
+    </view>
+</view>

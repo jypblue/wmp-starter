@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "componentGenerics": {
+    "falls-item": {
+      "default": "../falls-item/index"
+    }
+  }
+}

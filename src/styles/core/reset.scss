@@ -1,0 +1,17 @@
+.page {
+  button {
+    width: auto;
+    font-weight: normal;
+    &:after {
+      border: none;
+    }
+    &:not([size='mini']) {
+      width: auto;
+      font-weight: normal;
+    }
+  }
+}
+image {
+  width: auto;
+  height: auto;
+}

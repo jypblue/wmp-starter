@@ -1,0 +1,46 @@
+@import 'styles/index';
+$PingFangSCLight: 'PingFangSC-Light';
+.cms-swiper {
+  position: relative;
+  width: 100vw;
+  &-item {
+    position: relative;
+  }
+  &-pic {
+    display: block;
+    width: 100%;
+  }
+  &-tips {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    font-family: $PingFangSCLight;
+    font-size: 16rpx;
+    color: #777;
+    letter-spacing: 0;
+    line-height: 20rpx;
+    text-align: center;
+    opacity: 0.4;
+    background: #fff;
+    border-radius: 16rpx 0 0 0;
+    padding: 6rpx 8rpx;
+  }
+  &-dots {
+    position: absolute;
+    bottom: 20rpx;
+    width: 100%;
+    height: 14rpx;
+    z-index: 9;
+  }
+  &-dot {
+    background: $white;
+    width: 14rpx;
+    height: 14rpx;
+    border-radius: 100%;
+    margin: 0 6rpx;
+    &.is-active {
+      background: $primary-red;
+    }
+  }
+}

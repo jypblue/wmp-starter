@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/center/center",
+    "pages/community/community"
+  ],
+  "subPackages": [
+    {
+      "root": "subPack_account",
+      "pages": [
+        "pages/index/index",
+        "pages/logs/logs"
+      ]
+    },
+    {
+      "root": "subPack_community",
+      "pages": [
+        "pages/topic_publish/topic_publish",
+        "pages/news/news",
+        "pages/center/center"
+      ]
+    }
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/icon_home.png",
+        "selectedIconPath": "static/images/icon_home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "static/images/icon_me.png",
+        "selectedIconPath": "static/images/icon_me_active.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "static/images/icon_me.png",
+        "selectedIconPath": "static/images/icon_me_active.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "iconPath": "static/images/icon_me.png",
+        "selectedIconPath": "static/images/icon_me_active.png",
+        "text": "我的"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "iconPath": "static/images/icon_me.png",
+        "selectedIconPath": "static/images/icon_me_active.png",
+        "text": "首页"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "一条",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

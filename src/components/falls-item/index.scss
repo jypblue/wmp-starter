@@ -1,0 +1,48 @@
+@import 'styles/index';
+.falls-item {
+  width: 100%;
+  margin-bottom: 16rpx;
+  min-height: 300rpx;
+  border-radius: 6rpx;
+  overflow: hidden;
+  &-pic {
+    display: block;
+    width: 100%;
+  }
+  &-content {
+    padding: 20rpx;
+    background-color: $white;
+  }
+  &-title {
+    font-size: 28rpx;
+    font-weight: bold;
+    color: $color-333;
+  }
+  &-describe {
+    font-size: 24rpx;
+    color: $color-999;
+    padding-bottom: 8rpx;
+  }
+  &-price {
+    font-size: 28rpx;
+    color: $primary-red;
+    line-height: 1;
+    &.is-underline {
+      font-size: 20rpx;
+      color: $color-999;
+      text-decoration: line-through;
+      margin-left: 10rpx;
+    }
+  }
+  &-tag {
+    display: inline-flex;
+    padding: 0 12rpx;
+    font-size: 20rpx;
+    color: $primary-red;
+    border: 1rpx solid $primary-red;
+    background-color: $white;
+    border-radius: 6rpx;
+    margin-right: 6rpx;
+    min-height: 24rpx;
+  }
+}

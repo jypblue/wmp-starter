@@ -1,0 +1,11 @@
+<template name="h5Slider1">
+  <h5Slider1 list="{{module}}" autoPlay="{{true}}" />
+</template>
+
+<template name="h5NewPresonArea">
+  <h5NewPersonArea data="{{module}}" />
+</template>
+
+<template name="h5TimeLimit">
+  <h5TimeLimit data="{{module}}" />
+</template>

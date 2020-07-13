@@ -1,0 +1,16 @@
+<view class="falls-list">
+  <view class="falls-list-left" style="{{ 'margin-right:' + intervalWidth }}">
+    <view id="left-col-inner">
+      <block wx:for="{{items}}" wx:key="id">
+        <falls-item wx:if="{{item.columnPosition === 'left'}}" item="{{item}}"></falls-item>
+      </block>
+    </view>
+  </view>
+  <view class="falls-list-right">
+    <view id="right-col-inner">
+      <block wx:for="{{items}}" wx:key="id">
+        <falls-item wx:if="{{item.columnPosition === 'right'}}" item="{{item}}"></falls-item>
+      </block>
+    </view>
+  </view>
+</view>

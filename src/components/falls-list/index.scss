@@ -1,0 +1,11 @@
+.falls-list {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  &-left,
+  &-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}

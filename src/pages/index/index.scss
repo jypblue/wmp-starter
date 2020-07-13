@@ -1,0 +1,49 @@
+
+@import 'styles/index';
+@import "components/common/_variables";
+
+$top-height: 90rpx;
+.top-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 99;
+  box-shadow: $shadow;
+}
+.page-swiper {
+  height: 100vh;
+}
+.cms-cells {
+  background-color: $page-background;
+}
+.search-bar {
+  padding: 20rpx 30rpx;
+  height: 100rpx;
+  box-sizing: border-box;
+  &-input {
+    background-color: $search-input-bg-color;
+    color: $color-999;
+    margin: 0 25rpx;
+    padding: 12rpx 25rpx;
+    height: 60rpx;
+    border-radius: 60rpx;
+    box-sizing: border-box;
+    &-inner {
+      font-size: 24rpx;
+      display: block;
+      width: 100%;
+      padding-left: 18rpx;
+      box-sizing: border-box;
+    }
+  }
+}
+.cms-cell {
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid $line-color;
+}
+.falls-list-wrap {
+  background-color: $page-background;
+  padding: 20rpx;
+}

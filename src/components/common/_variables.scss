@@ -1,0 +1,18 @@
+$theme-color: #3f82fd;
+$theme-color--active: rgba($theme-color, 0.7);
+
+$line-color: #ebedf0;
+
+$black1: #333;
+$black2: #666;
+$black3: #999;
+
+$shadow: 0 0 20rpx -5rpx rgba(0, 0, 0, 0.1);
+
+@mixin line($line: 1) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+  word-break: break-all;
+}

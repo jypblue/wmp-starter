@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "一条",
+  "disableScroll": true,
+  "usingComponents": {
+    "shg-tab": "components/tab/index",
+    "shg-scroll": "components/scroll/index",
+    "falls-list": "components/falls-list/index",
+    "cms": "components/cms/index",
+    "h5Slider1": "components/cms-widgets/h5Slider1/index",
+    "h5NewPersonArea": "components/cms-widgets/h5NewPersonArea/index",
+    "h5TimeLimit": "components/cms-widgets/h5TimeLimit/index"
+  }
+}

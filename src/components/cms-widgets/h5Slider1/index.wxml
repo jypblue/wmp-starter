@@ -1,0 +1,31 @@
+<view class="cms-swiper">
+  <swiper
+    autoplay="{{autoPlay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    circular="{{circular}}"
+    bind:change="onSwiperChange"
+    style="height:{{height}}"
+    >
+      <swiper-item wx:for="{{list}}" wx:key="unique">
+          <view class="cms-swiper-item" style="height:{{height}}">
+              <image
+                class="cms-swiper-pic"
+                src="{{item.src}}"
+                style="height:{{height}}"
+                mode="aspectFill"
+                lazy-load="true"/>
+               <view class="cms-swiper-tips" wx:if="{{item.name}}">
+                {{item.name}}
+               </view>
+          </view>
+      </swiper-item>
+  </swiper>
+  <view class="cms-swiper-dots flex flex-center">
+      <view
+        wx:for="{{list}}"
+        wx:key="unique"
+        class="cms-swiper-dot {{current === index? ' is-active' : '' }}">
+      </view>
+  </view>
+</view>

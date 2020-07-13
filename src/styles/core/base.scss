@@ -1,0 +1,42 @@
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ellipsis--l2 {
+  -webkit-line-clamp: 2;
+}
+.ellipsis--l3 {
+  -webkit-line-clamp: 3;
+}
+.ellipsis--l2,
+.ellipsis--l3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.color-333 { color: $color-333; }
+.color-666 { color: $color-666; }
+.color-999 { color: $color-999; }
+.fs22 { font-size: 22rpx; }
+.fs24 { font-size: 24rpx; }
+.fs26 { font-size: 26rpx; }
+.fs28 { font-size: 28rpx; }
+.fs30 { font-size: 30rpx; }
+.fs32 { font-size: 32rpx; }
+.fs34 { font-size: 34rpx; }
+.mr6 { margin-right: 6rpx; }
+.mr12 { margin-right: 12rpx; }
+.mr18 { margin-right: 18rpx; }
+.pt10 { padding-top: 10rpx; }
+.pt20 { padding-top: 20rpx; }
+.pl20 { padding-left: 20rpx; }
+.pl30 { padding-left: 30rpx; }
+.pr20 { padding-right: 20rpx; }

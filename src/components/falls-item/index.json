@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "imageCard": "../falls-item-widgets/imageCard/index",
+    "liveVideo": "../falls-item-widgets/liveVideo/index",
+    "productCard": "../falls-item-widgets/productCard/index",
+    "topicCard": "../falls-item-widgets/topicCard/index"
+  }
+}

@@ -1,0 +1,7 @@
+/build/
+/node_modules
+/config/
+/dist/
+*.wxs
+
+
