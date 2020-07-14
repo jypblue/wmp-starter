@@ -6,9 +6,7 @@
   "scripts": {
     "dev": "ENV=development wmp serve",
     "start": "npm run dev",
-    "build": "ENV=production wmp build",
-    "lint:scss": "stylelint --fix src/**/*.scss",
-    "lint": "eslint --fix --ext .js src"
+    "build": "ENV=production wmp build"
   },
   "keywords": [
     "wechat",
