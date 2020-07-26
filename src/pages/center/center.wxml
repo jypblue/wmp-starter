@@ -9,9 +9,12 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-    <van-button type="primary">按钮</van-button>
-    <text>hahahahaha</text>
+  </view>
+  <view class="intro">{{numA}} + {{numB}} = {{sum}}</view>
+  <view class="intro">
+    <van-button type="primary" bind:tap="update">update按钮</van-button>
   </view>
 </view>

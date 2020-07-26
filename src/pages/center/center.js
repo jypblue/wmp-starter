@@ -1,4 +1,6 @@
 // index.js
+import { createStoreBindings } from 'mobx-miniprogram-bindings';
+import { store } from '../../store';
 // 获取应用实例
 const app = getApp();
 
@@ -19,7 +21,14 @@ Page({
       url: '/subPack_account/pages/logs/logs'
     });
   },
-  onLoad: function () {
+  onLoad() {
+    this.storeBindings = createStoreBindings(this, {
+      store,
+      fields: ['numA', 'numB', 'sum'],
+      actions: ['update'],
+    });
+
+    console.log(this.storeBindings);
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -50,7 +59,13 @@ Page({
   onShow() {
     selectTabBar(this, 3, true);
   },
-  getUserInfo: function (e) {
+  onUnload() {
+    this.storeBindings.destroyStoreBindings();
+  },
+  myMethod() {
+    console.log(this.data.sum);
+  },
+  getUserInfo(e) {
     console.log(e);
     app.globalData.userInfo = e.detail.userInfo;
     this.setData({
