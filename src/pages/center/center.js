@@ -13,13 +13,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  // 事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '/subPack_account/pages/logs/logs'
-    });
-  },
-  onLoad: function () {
+  onLoad() {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -57,5 +51,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     });
-  }
+  },
+  // 事件处理函数
+  bindViewTap() {
+    wx.navigateTo({
+      url: '/subPack_account/pages/logs/logs'
+    });
+  },
 });
