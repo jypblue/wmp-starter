@@ -4,9 +4,9 @@
   "description": "a boilerplate project for wechat miniprogram",
   "main": "dist/app.js",
   "scripts": {
-    "dev": "ENV=development wmp serve",
+    "dev": "ENV=development webpack --watch --progress --mode=development --config build/webpack.config.dev.js",
     "start": "npm run dev",
-    "build": "ENV=production wmp build"
+    "build": "ENV=production webpack --progress --mode=production --config build/webpack.config.prod.js"
   },
   "keywords": [
     "wechat",
